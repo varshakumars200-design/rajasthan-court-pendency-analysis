@@ -1,0 +1,95 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 18, 2026 at 09:27 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `court_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rajasthan_cases`
+--
+
+CREATE TABLE `rajasthan_cases` (
+  `District` varchar(50) DEFAULT NULL,
+  `Civil` int(11) DEFAULT NULL,
+  `Criminal` int(11) DEFAULT NULL,
+  `Total` int(11) DEFAULT NULL,
+  `Criminal_pct` decimal(5,1) DEFAULT NULL,
+  `Civil_pct` decimal(5,1) DEFAULT NULL,
+  `Share_of_State_pct` decimal(5,2) DEFAULT NULL,
+  `District_Rank` int(11) DEFAULT NULL,
+  `Pendency_band` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rajasthan_cases`
+--
+
+INSERT INTO `rajasthan_cases` (`District`, `Civil`, `Criminal`, `Total`, `Criminal_pct`, `Civil_pct`, `Share_of_State_pct`, `District_Rank`, `Pendency_band`) VALUES
+('Jaipur Metro I', 62564, 296166, 358730, 82.6, 17.4, 14.03, 1, 'High'),
+('Jaipur Metro II', 35152, 273920, 309072, 88.6, 11.4, 12.09, 2, 'High'),
+('Alwar', 33446, 98973, 132419, 74.7, 25.3, 5.18, 3, 'High'),
+('Jodhpur Metro', 20960, 94345, 115305, 81.8, 18.2, 4.51, 4, 'High'),
+('Udaipur', 17917, 96535, 114452, 84.3, 15.7, 4.48, 5, 'High'),
+('Kota', 16763, 86032, 102795, 83.7, 16.3, 4.02, 6, 'High'),
+('Ajmer', 25696, 71266, 96962, 73.5, 26.5, 3.79, 7, 'High'),
+('Bhilwara', 17007, 63210, 80217, 78.8, 21.2, 3.14, 8, 'High'),
+('Ganganagar', 15486, 55305, 70791, 78.1, 21.9, 2.77, 9, 'High'),
+('Pali', 16037, 51654, 67691, 76.3, 23.7, 2.65, 10, 'High'),
+('Bharatpur', 15722, 51736, 67458, 76.7, 23.3, 2.64, 11, 'High'),
+('Sikar', 17858, 46919, 64777, 72.4, 27.6, 2.53, 12, 'High'),
+('Jaipur District', 18226, 41035, 59261, 69.2, 30.8, 2.32, 13, 'High'),
+('Bikaner', 14568, 44241, 58809, 75.2, 24.8, 2.30, 14, 'High'),
+('Merta Nagaur', 12363, 35359, 47722, 74.1, 25.9, 1.87, 15, 'High'),
+('Chittorgarh', 8925, 38246, 47171, 81.1, 18.9, 1.84, 16, 'Medium'),
+('Hanumangarh', 11622, 33570, 45192, 74.3, 25.7, 1.77, 17, 'Medium'),
+('Jhunjhunu', 9519, 32370, 41889, 77.3, 22.7, 1.64, 18, 'Medium'),
+('Barmer', 8046, 32900, 40946, 80.3, 19.7, 1.60, 19, 'Medium'),
+('Tonk', 9613, 30114, 39727, 75.8, 24.2, 1.55, 20, 'Medium'),
+('Dausa', 7219, 31012, 38231, 81.1, 18.9, 1.50, 21, 'Medium'),
+('Rajsamand', 8913, 28270, 37183, 76.0, 24.0, 1.45, 22, 'Medium'),
+('Beawar', 9654, 27333, 36987, 73.9, 26.1, 1.45, 23, 'Medium'),
+('Churu', 8428, 27760, 36188, 76.7, 23.3, 1.42, 24, 'Medium'),
+('Jhalawar', 4048, 31666, 35714, 88.7, 11.3, 1.40, 25, 'Medium'),
+('Kotputli Behror', 11200, 22796, 33996, 67.1, 32.9, 1.33, 26, 'Medium'),
+('Khairtal Tijara', 7972, 24312, 32284, 75.3, 24.7, 1.26, 27, 'Medium'),
+('Sawai Madhopur', 8109, 22697, 30806, 73.7, 26.3, 1.20, 28, 'Medium'),
+('Baran', 3964, 26701, 30665, 87.1, 12.9, 1.20, 29, 'Medium'),
+('Bundi', 6328, 21723, 28051, 77.4, 22.6, 1.10, 30, 'Low'),
+('Jodhpur District', 4519, 23222, 27741, 83.7, 16.3, 1.08, 31, 'Low'),
+('Dholpur', 5470, 21483, 26953, 79.7, 20.3, 1.05, 32, 'Low'),
+('Sirohi', 5454, 19637, 25091, 78.3, 21.7, 0.98, 33, 'Low'),
+('Karauli', 4021, 21065, 25086, 84.0, 16.0, 0.98, 34, 'Low'),
+('Jalore', 4514, 19461, 23975, 81.2, 18.8, 0.94, 35, 'Low'),
+('Deeg', 4353, 17601, 21954, 80.2, 19.8, 0.86, 36, 'Low'),
+('Didwana Kuchaman', 5359, 15360, 20719, 74.1, 25.9, 0.81, 37, 'Low'),
+('Banswara', 2508, 17081, 19589, 87.2, 12.8, 0.77, 38, 'Low'),
+('Dungarpur', 2161, 12437, 14598, 85.2, 14.8, 0.57, 39, 'Low'),
+('Pratapgarh', 1943, 10939, 12882, 84.9, 15.1, 0.50, 40, 'Low'),
+('Jaisalmer', 1223, 10281, 11504, 89.4, 10.6, 0.45, 41, 'Low'),
+('Balotra', 2177, 7818, 9995, 78.2, 21.8, 0.39, 42, 'Low'),
+('Salumber', 696, 7028, 7724, 91.0, 9.0, 0.30, 43, 'Low'),
+('Phalodi', 1121, 6420, 7541, 85.1, 14.9, 0.29, 44, 'Low');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
